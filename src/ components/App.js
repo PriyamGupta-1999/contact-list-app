@@ -8,11 +8,24 @@ import ContactList from './ContactList';
 
 function App() {
 
+    const contacts = [
+        {
+            id: "1",
+            name: "Dipesh",
+            email: "Dipesh@gmail.com"
+        },
+        {
+            id: "2",
+            name: "Nikesh",
+            email: "nicks@gmail.com"
+        },
+    ]
     return(
-        <div>
+        <div className='ui container'>
             <Header />
             <AddContact />
-            <ContactList />
+            <ContactList contacts={contacts}/>
+            {/* props are used for contacts */}
         
         </div>
     );
